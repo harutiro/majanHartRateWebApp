@@ -77,11 +77,11 @@ const Graph: React.FC = () => {
   };
 
   const data1 = {
-    labels: data.filter((item) => item.user === 'A').map((item) => item.time),
+    labels: data.filter((item) => item.user === 'A').slice(-120).map((item) => item.time),
     datasets: [
       {
         label: 'User A',
-        data: data.filter((item) => item.user === 'A').map((item) => item.heart_rate),
+        data: data.filter((item) => item.user === 'A').slice(-120).map((item) => item.heart_rate),
         borderColor: 'rgb(255, 99, 132)',
         backgroundColor: 'rgba(255, 99, 132, 0.5)',
       },
@@ -89,11 +89,11 @@ const Graph: React.FC = () => {
   };
 
   const data2 = {
-    labels: data.filter((item) => item.user === 'B').map((item) => item.time),
+    labels: data.filter((item) => item.user === 'B').slice(-120).map((item) => item.time),
     datasets: [
       {
         label: 'User B',
-        data: data.filter((item) => item.user === 'B').map((item) => item.heart_rate),
+        data: data.filter((item) => item.user === 'B').slice(-120).map((item) => item.heart_rate),
         borderColor: 'rgb(255, 99, 132)',
         backgroundColor: 'rgba(255, 99, 132, 0.5)',
       },
@@ -101,11 +101,11 @@ const Graph: React.FC = () => {
   };
 
   const data3 = {
-    labels: data.filter((item) => item.user === 'C').map((item) => item.time),
+    labels: data.filter((item) => item.user === 'C').slice(-120).map((item) => item.time),
     datasets: [
       {
         label: 'User C',
-        data: data.filter((item) => item.user === 'C').map((item) => item.heart_rate),
+        data: data.filter((item) => item.user === 'C').slice(-120).map((item) => item.heart_rate),
         borderColor: 'rgb(255, 99, 132)',
         backgroundColor: 'rgba(255, 99, 132, 0.5)',
       },
@@ -113,11 +113,11 @@ const Graph: React.FC = () => {
   };
 
   const data4 = {
-    labels: data.filter((item) => item.user === 'D').map((item) => item.time),
+    labels: data.filter((item) => item.user === 'D').slice(-120).map((item) => item.time),
     datasets: [
       {
         label: 'User D',
-        data: data.filter((item) => item.user === 'D').map((item) => item.heart_rate),
+        data: data.filter((item) => item.user === 'D').slice(-120).map((item) => item.heart_rate),
         borderColor: 'rgb(255, 99, 132)',
         backgroundColor: 'rgba(255, 99, 132, 0.5)',
       },
