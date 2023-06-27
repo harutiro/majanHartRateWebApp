@@ -34,7 +34,7 @@ const Graph: React.FC = () => {
 
   useEffect(() => {
 
-    
+
 
     const fetchData = async () => {
       try {
@@ -74,10 +74,16 @@ const Graph: React.FC = () => {
         text: '麻雀における心拍数の計測',
       },
     },
+    scales: {
+      y: {
+        min: 65,
+        max: 90,
+      },
+    },
   };
 
   const data1 = {
-    labels: data.filter((item) => item.user === 'A').slice(-120).map((item) => item.time),
+    labels: data.filter((item) => item.user === 'A').filter((item) => item.heart_rate > 10).slice(-120).map((item) => item.time),
     datasets: [
       {
         label: 'User A',
@@ -89,7 +95,7 @@ const Graph: React.FC = () => {
   };
 
   const data2 = {
-    labels: data.filter((item) => item.user === 'B').slice(-120).map((item) => item.time),
+    labels: data.filter((item) => item.user === 'B').filter((item) => item.heart_rate > 10).slice(-120).map((item) => item.time),
     datasets: [
       {
         label: 'User B',
@@ -101,7 +107,7 @@ const Graph: React.FC = () => {
   };
 
   const data3 = {
-    labels: data.filter((item) => item.user === 'C').slice(-120).map((item) => item.time),
+    labels: data.filter((item) => item.user === 'C').filter((item) => item.heart_rate > 10).slice(-120).map((item) => item.time),
     datasets: [
       {
         label: 'User C',
@@ -113,7 +119,7 @@ const Graph: React.FC = () => {
   };
 
   const data4 = {
-    labels: data.filter((item) => item.user === 'D').slice(-120).map((item) => item.time),
+    labels: data.filter((item) => item.user === 'D').filter((item) => item.heart_rate > 10).slice(-120).map((item) => item.time),
     datasets: [
       {
         label: 'User D',
